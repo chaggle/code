@@ -18,16 +18,10 @@ spring:
         file-extension: yaml
         username: nacos
         password: nacos
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql//localhost:3306/oauth?characterEncoding=utf8&connectTimeout=10000&socketTimeout=30000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+    username: nacos
+    password: nacos
 
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: oauth2-server-routes
-          uri:
-            lb://oauth2-server
-          predicates:
-            - Path=/**
-          filters:
-            - StripPrefix=1
+
