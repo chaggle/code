@@ -1,9 +1,9 @@
 server:
-  port: 15000
+  port: 14999
 
 spring:
   application:
-    name: server-gateway
+    name: oauth2-server
   main:
     allow-bean-definition-overriding: true
 
